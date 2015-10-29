@@ -15,7 +15,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.box_url = 'https://github.com/kraksoft/vagrant-box-ubuntu/releases/download/15.04/ubuntu-15.04-amd64.box'
     config.vm.hostname = 'jenkins'
     config.vm.boot_timeout = 600
-    config.vm.box = 'ubuntu_14.04_64'
     config.vm.network :private_network, :ip => '10.10.10.20'
     config.vm.network :forwarded_port, guest: 8080, host: 8080, id: "jenkins", auto_correct: true
 
