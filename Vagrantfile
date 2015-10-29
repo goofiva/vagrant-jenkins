@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 # Local Development VM Configuration
 #-----------------------------------------------------------------------------------------------------------------------
   config.vm.define :jenkins do |config|
-    config.omnibus.chef_version = '12.5'
+    config.omnibus.chef_version = '12.5.1'
     config.vm.box = 'ubuntu-15.04-amd64'
     config.vm.box_url = 'https://github.com/kraksoft/vagrant-box-ubuntu/releases/download/15.04/ubuntu-15.04-amd64.box'
     config.vm.hostname = 'jenkins'
@@ -44,7 +44,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       chef.environments_path = ["./ops/chef/environments"]
       # chef.json = JSON.parse(File.read('chef.local.json'))
 
-	  # chef.add_recipe 'vagrant_jenkins::setup'
+	    chef.add_recipe 'vagrant_jenkins::setup'
     end
   end
 
