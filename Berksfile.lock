@@ -1,0 +1,18 @@
+DEPENDENCIES
+  java
+  vagrant_jenkins
+    path: ops/chef/cookbooks/vagrant_jenkins
+
+GRAPH
+  apt (2.9.2)
+  java (1.35.0)
+  jenkins (2.4.1)
+    apt (~> 2.0)
+    runit (~> 1.5)
+    yum (~> 3.0)
+  packagecloud (0.1.0)
+  runit (1.7.4)
+    packagecloud (>= 0.0.0)
+  vagrant_jenkins (0.1.0)
+    jenkins (>= 0.0.0)
+  yum (3.8.2)
